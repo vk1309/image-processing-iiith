@@ -451,7 +451,7 @@ function confirmTo(url) {
 			<div id="topMenu">
 			<h1 style="text-align: center;">Virtual Lab for IMAGE PROCESSING</h1>
 <div class="home">
-<a onclick="confirmTo('index.php')">home</a>
+<a onclick="confirmTo('index.html')">home</a>
 </div>
 
 			<div class="menu">
