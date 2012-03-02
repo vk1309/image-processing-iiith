@@ -102,7 +102,7 @@ buttId="button2";
 blinker(6);
 break;
 //case 2: $("#nextBox").html("Observe the hostogram, try making changes to the bin size and observe the trends.");
-case 2: $("#nextBox").html(" ");
+case 2: $("#nextBox").html("Note down the results");
 break;
 case 3: $("#nextBox").html("Click on each of the four subgraphs to view the full size.");
 
