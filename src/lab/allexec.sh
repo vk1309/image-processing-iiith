@@ -1,13 +1,17 @@
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/affine.out codes/latest_affine.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/arith.out codes/im_arith.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/dist.out codes/im_dist.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/fourier.out codes/im_fourier.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/hist.out codes/im_hist.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/morpho.out codes/im_morphology.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/neigh.out codes/im_nbrhood.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/path.out codes/im_path.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/point.out codes/im_point.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/segment.out codes/im_segment.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/colour.out codes/im_colour.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/colour2.out codes/im_colourLin.cpp
-gcc -I/usr/local/src/OpenCV-2.3.1/include/opencv/ -L/usr/local/src/OpenCV-2.3.1/build/lib/ -lcv -lhighgui -lstdc++ -o execs/colour3.out codes/im_colhist.cpp
+export OPENCV_INC=/usr/include/opencv
+export OPENCV_LIB=/usr/lib/
+export OPENCV_LIB_OPTS="-lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann"
+
+gcc  -I$OPENCV_INC codes/latest_affine.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/affine.out
+gcc  -I$OPENCV_INC codes/im_arith.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/arith.out
+gcc  -I$OPENCV_INC codes/im_dist.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/dist.out
+gcc  -I$OPENCV_INC codes/im_fourier.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/fourier.out
+gcc  -I$OPENCV_INC codes/im_hist.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/hist.out
+gcc  -I$OPENCV_INC codes/im_morphology.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/morpho.out
+gcc  -I$OPENCV_INC codes/im_nbrhood.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/neigh.out 
+gcc  -I$OPENCV_INC codes/im_path.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/path.out
+gcc  -I$OPENCV_INC codes/im_point.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/point.out
+gcc  -I$OPENCV_INC codes/im_segment.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/segment.out
+gcc  -I$OPENCV_INC codes/im_colour.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colour.out
+gcc  -I$OPENCV_INC codes/im_colourLin.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colour2.out
+gcc  -I$OPENCV_INC codes/im_colhist.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colour3.out
