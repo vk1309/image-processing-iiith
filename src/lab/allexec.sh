@@ -15,3 +15,4 @@ gcc  -I$OPENCV_INC codes/im_segment.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/
 gcc  -I$OPENCV_INC codes/im_colour.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colour.out
 gcc  -I$OPENCV_INC codes/im_colourLin.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colour2.out
 gcc  -I$OPENCV_INC codes/im_colhist.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colour3.out
+gcc  -I$OPENCV_INC codes/im_colhist.cpp -L$OPENCV_LIB $OPENCV_LIB_OPTS -o execs/colhist.out 
