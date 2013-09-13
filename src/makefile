@@ -8,7 +8,7 @@ theme=blue-icon
 all:  build 
 
 build:
-	(mkdir ${build-dir};cd ./lab;./allexec.sh)
+	(mkdir ${build-dir};cd ./lab;sh -x ./allexec.sh)
 	(touch ${build-dir}/theme-${theme}; rsync -avC --exclude ${mathjax}.zip lab/* lib/* help themes/${theme}/* ${build-dir})
 	(chmod 777 -R ${build-dir}/temp ${build-dir}/images  ${build-dir}/arith)
 
