@@ -1,0 +1,5 @@
+libhighgui-dev                       2.3.1-7                                             Translation package for libhighgui-dev
+libhighgui2.3                        2.3.1-7                                             computer vision library - libhighgui translation package
+libcv-dev                            2.3.1-7                                             Translation package for libcv-dev
+libcv2.3                             2.3.1-7                                             computer vision library - libcv* translation package
+
