@@ -79,7 +79,9 @@
                 "arch": "i386", 
                 "hosting": "dedicated", 
                 "installer": ["sudo apt-get update",
-                "sudo apt-get install -y gcc apache2 php5-gd libcv-dev libcv2.3 libcvaux-dev libcvaux2.3 libhighgui-dev libhighgui2.3 libopencv-calib3d-dev libopencv-calib3d2.3 libopencv-contrib-dev libopencv-contrib2.3 libopencv-core-dev libopencv-core2.3 libopencv-dev libopencv-features2d-dev libopencv-features2d2.3 libopencv-flann-dev libopencv-flann2.3 libopencv-gpu-dev libopencv-gpu2.3 libopencv-highgui-dev libopencv-highgui2.3 libopencv-imgproc-dev libopencv-imgproc2.3 libopencv-legacy-dev libopencv-legacy2.3 libopencv-ml-dev libopencv-ml2.3 libopencv-objdetect-dev libopencv-objdetect2.3 libopencv-video-dev libopencv-video2.3 opencv-doc python-opencv"], 
+                "sudo apt-get install -y gcc",
+                "sudo apt-get update",                
+                "sudo apt-get install -y apache2 php5-gd libcv-dev libcv2.3 libcvaux-dev libcvaux2.3 libhighgui-dev libhighgui2.3 libopencv-calib3d-dev libopencv-calib3d2.3 libopencv-contrib-dev libopencv-contrib2.3 libopencv-core-dev libopencv-core2.3 libopencv-dev libopencv-features2d-dev libopencv-features2d2.3 libopencv-flann-dev libopencv-flann2.3 libopencv-gpu-dev libopencv-gpu2.3 libopencv-highgui-dev libopencv-highgui2.3 libopencv-imgproc-dev libopencv-imgproc2.3 libopencv-legacy-dev libopencv-legacy2.3 libopencv-ml-dev libopencv-ml2.3 libopencv-objdetect-dev libopencv-objdetect2.3 libopencv-video-dev libopencv-video2.3 opencv-doc python-opencv"], 
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
