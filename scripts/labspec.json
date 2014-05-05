@@ -4,7 +4,7 @@
             "platform": {
                 "arch": "i386", 
                 "build_steps": {
-                    "build": ["make -C ../src"], 
+                    "build": ["make ../src"], 
                     "configure": [], 
                     "post_build": ["sudo /etc/init.d/apache2 restart"], 
                     "pre_build": [],
