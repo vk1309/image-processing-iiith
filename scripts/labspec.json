@@ -6,7 +6,7 @@
                 "build_steps": {
                     "build": ["make -C ../src"], 
                     "configure": [], 
-                    "post_build": [], 
+                    "post_build": ["sudo service apache2 restart"], 
                     "pre_build": ["sudo apt-get update",
                 "sudo apt-get install -y php5 libapache2-mod-php5",
                 "sudo apt-get install -y apache2 php5-gd libcv-dev libcv2.3 libcvaux-dev libcvaux2.3 libhighgui-dev",
