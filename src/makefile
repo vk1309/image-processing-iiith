@@ -17,10 +17,10 @@ build:
 
 
 install:
-	#rsync -avz ../build/ /var/www/
-	
-	(rm -rf /var/www/labs/cse19/*; sudo "rsync -avz ${build-dir}/ /var/www/")
-	(chmod -R 777 /var/www/*)
+	rm -rf /var/www/*
+	sudo rsync -avz ${build-dir}/ /var/www/
+	chmod -R 777 /var/www/*
+
 
 # don't remove the js directory, since copying it again with mathjax takes too long.
 # http://superuser.com/questions/168130/unix-delete-files-and-folders-excluding-pattern
