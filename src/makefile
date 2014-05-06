@@ -12,7 +12,7 @@ build:
 	(mkdir ${build-dir};cd ./lab;sh -x ./allexec.sh)
 	(touch ${build-dir}/theme-${theme}; rsync -avC --exclude ${mathjax}.zip lab/* lib/* help themes/${theme}/* ${build-dir})
 	#(chmod 777 -R ${build-dir}/temp ${build-dir}/images  ${build-dir}/arith)
-	(chmod 755 -R ${build-dir}/)
+	(chmod 777 -R ${build-dir}/)
 
 
 install:
