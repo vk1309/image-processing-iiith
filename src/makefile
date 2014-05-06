@@ -5,18 +5,22 @@ build-js-dir=${build-dir}/js
 theme=blue-icon
 
 
-all:  build 
+all:  build install
 
 build:
 	
 	(mkdir ${build-dir};cd ./lab;sh -x ./allexec.sh)
 	(touch ${build-dir}/theme-${theme}; rsync -avC --exclude ${mathjax}.zip lab/* lib/* help themes/${theme}/* ${build-dir})
 	#(chmod 777 -R ${build-dir}/temp ${build-dir}/images  ${build-dir}/arith)
-	(chmod 777 -R ${build-dir}/)
+	#FIXME: should not happen in build directory, should change mode to 777 in deplyment directory!
+	#(chmod -R 777 ${build-dir}/)
 
 
 install:
-	(rm -rf /var/www/labs/cse19/*; su tester -c "rsync -avz ${build-dir}/ /var/www/labs/cse19/")
+	#rsync -avz ../build/ /var/www/
+	
+	(rm -rf /var/www/labs/cse19/*; sudo "rsync -avz ${build-dir}/ /var/www/")
+	(chmod -R 777 /var/www/*)
 
 # don't remove the js directory, since copying it again with mathjax takes too long.
 # http://superuser.com/questions/168130/unix-delete-files-and-folders-excluding-pattern
