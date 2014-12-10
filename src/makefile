@@ -9,7 +9,7 @@ all:  build install
 
 build:
 	
-	(mkdir ${build-dir};cd ./lab;sh -x ./allexec.sh)
+	(mkdir ${build-dir})
 	(touch ${build-dir}/theme-${theme}; rsync -avC --exclude ${mathjax}.zip lab/* lib/* help themes/${theme}/* ${build-dir})
 	#(chmod 777 -R ${build-dir}/temp ${build-dir}/images  ${build-dir}/arith)
 	#FIXME: should not happen in build directory, should change mode to 777 in deplyment directory!
