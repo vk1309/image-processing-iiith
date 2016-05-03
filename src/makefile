@@ -1,32 +1,41 @@
-build-dir=../build
-lib-dir=lib
-build-js-dir=${build-dir}/js
+# build-dir=../build
+# lib-dir=lib
+# build-js-dir=${build-dir}/js
 
-theme=blue-icon
+# theme=blue-icon
 
 
-all:  build install
+# all:  build install
 
-build:
+# build:
 	
-	(mkdir ${build-dir})
-	(touch ${build-dir}/theme-${theme}; rsync -avC --exclude ${mathjax}.zip lab/* lib/* help themes/${theme}/* ${build-dir})
-	#(chmod 777 -R ${build-dir}/temp ${build-dir}/images  ${build-dir}/arith)
-	#FIXME: should not happen in build directory, should change mode to 777 in deplyment directory!
-	#(chmod -R 777 ${build-dir}/)
+# 	(mkdir ${build-dir})
+# 	(touch ${build-dir}/theme-${theme}; rsync -avC --exclude ${mathjax}.zip lab/* lib/* help themes/${theme}/* ${build-dir})
+# 	#(chmod 777 -R ${build-dir}/temp ${build-dir}/images  ${build-dir}/arith)
+# 	#FIXME: should not happen in build directory, should change mode to 777 in deplyment directory!
+# 	#(chmod -R 777 ${build-dir}/)
 
 
-install:
-	rm -rf /var/www/*
-	sudo rsync -avz ${build-dir}/ /var/www/
-	chmod -R 777 /var/www/*
+# install:
+# 	rm -rf /var/www/*
+# 	sudo rsync -avz ${build-dir}/ /var/www/
+# 	chmod -R 777 /var/www/*
 
 
-# don't remove the js directory, since copying it again with mathjax takes too long.
-# http://superuser.com/questions/168130/unix-delete-files-and-folders-excluding-pattern
+# # don't remove the js directory, since copying it again with mathjax takes too long.
+# # http://superuser.com/questions/168130/unix-delete-files-and-folders-excluding-pattern
+# clean:
+# 	(rm -rf ${build-dir})
+
+build-dir=../build
+theme=green-icon
+
+all: ${theme}
+
+green-icon:
+	mkdir ${build-dir};rsync -avC --progress lab/* themes/${theme}/* ${build-dir}
 clean:
-	(rm -rf ${build-dir})
-
+	rm -rf ${build-dir}
 
 
 
